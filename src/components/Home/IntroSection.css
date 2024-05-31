@@ -346,3 +346,9 @@ html {
     width: 50px;
   }
 }
+
+@media (min-width: 1251px) and (max-width: 1600px) {
+  .scroll-down {
+    bottom: -70px;
+  }
+}
