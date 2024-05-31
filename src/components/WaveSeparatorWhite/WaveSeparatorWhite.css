@@ -1,0 +1,26 @@
+.ocean2 {
+  height: 200px;
+  width: 100%;
+  position: relative;
+  background: #333333;
+  margin-top: -5px;
+}
+
+.wave2 {
+  background: url("../../img/wave2.svg") repeat-x;
+  position: absolute;
+  top: 2px;
+  width: 100%;
+  height: 200px;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .ocean2 {
+    height: 100px;
+  }
+
+  .wave2 {
+    height: 100px;
+  }
+}

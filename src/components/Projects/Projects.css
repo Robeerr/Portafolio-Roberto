@@ -1,0 +1,303 @@
+.projects-section {
+  text-align: center;
+  background-color: #333333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+  margin-top: 0;
+  overflow-x: hidden;
+}
+
+.projects-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.carousel-container .btns {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn-left,
+.btn-right {
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Media Queries */
+
+/* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 20px;
+  }
+
+  .projects-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .carousel-container {
+    margin-top: 30px;
+    max-width: 100%;
+  }
+
+  .btn-left,
+  .btn-right {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-container .btns {
+    width: 95%;
+  }
+
+  .carousel-container .slider .slide {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .carousel-container .slider .slide img {
+    width: 100%;
+  }
+
+  .carousel-container .slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-container .slider .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-container .slider .slide .card {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .carousel-container .slider .slide .card img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Small Mobile Devices (361px to 515px) */
+@media (min-width: 361px) and (max-width: 515px) {
+  .projects-section {
+    padding: 20px;
+  }
+
+  .projects-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .carousel-container {
+    margin-top: 30px;
+    max-width: 100%;
+  }
+
+  .btn-left,
+  .btn-right {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-container .btns {
+    width: 95%;
+  }
+
+  .carousel-container .slider .slide {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .carousel-container .slider .slide img {
+    width: 100%;
+  }
+
+  .carousel-container .slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-container .slider .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-container .slider .slide .card {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .carousel-container .slider .slide .card img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Tablet Devices (min-width: 481px) and (max-width: 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .projects-section {
+    padding: 30px;
+  }
+
+  .projects-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+  }
+
+  .carousel-container {
+    margin-top: 40px;
+    max-width: 100%;
+  }
+
+  .btn-left,
+  .btn-right {
+    width: 45px;
+    height: 45px;
+  }
+
+  .carousel-container .btns {
+    width: 90%;
+  }
+
+  .carousel-container .slider .slide {
+    width: 85%;
+    padding: 15px;
+  }
+
+  .carousel-container .slider .slide img {
+    width: 100%;
+  }
+
+  .carousel-container .slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-container .slider .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-container .slider .slide .card {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .carousel-container .slider .slide .card img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Laptop Devices (min-width: 769px) and (max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projects-section {
+    padding: 40px;
+  }
+
+  .projects-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 35px;
+  }
+
+  .carousel-container {
+    margin-top: 50px;
+    max-width: 90%;
+  }
+
+  .btn-left,
+  .btn-right {
+    width: 50px;
+    height: 50px;
+  }
+
+  .carousel-container .btns {
+    width: 90%;
+  }
+
+  .carousel-container .slider .slide {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .carousel-container .slider .slide img {
+    width: 100%;
+  }
+
+  .carousel-container .slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-container .slider .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-container .slider .slide .card {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .carousel-container .slider .slide .card img {
+    width: 100%;
+    height: auto;
+  }
+}

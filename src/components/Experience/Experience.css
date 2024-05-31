@@ -1,0 +1,267 @@
+.experience-section {
+  padding: 50px 0;
+  background-color: #fff;
+  color: black;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.experience-columns {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 230px;
+}
+
+.experience-column {
+  width: 45%;
+  position: relative;
+}
+
+.experience-column h3 {
+  margin-bottom: 40px;
+}
+
+.experience-item {
+  margin: 10px 0;
+  text-align: left;
+  position: relative;
+  width: calc(50% - 20px);
+}
+
+.experience-item.left {
+  margin-right: calc(50% + 30px);
+}
+
+.experience-item.right {
+  margin-left: calc(50% + 30px);
+  padding-left: 20px;
+}
+
+.experience-item::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 10px;
+  border: 10px solid transparent;
+}
+
+.experience-item.left::before {
+  border-right-color: #444;
+  right: -20px;
+}
+
+.experience-item.right::before {
+  border-left-color: #444;
+  left: -30px;
+}
+
+.experience-column::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #2ea1d1;
+}
+
+.ag-courses-item_link {
+  display: block;
+  padding: 30px 20px;
+  background-color: #333333;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: none;
+}
+
+.ag-courses-item_title {
+  min-height: 72px;
+  margin: 0 0 10px;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 24px;
+  color: #2ea1d1;
+  z-index: 2;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: color 0.5s ease, top 0.5s ease;
+}
+
+.experience-date {
+  color: #aaa;
+  font-size: 0.9em;
+}
+
+.experience-details h5 {
+  margin: 5px 0;
+  color: #fff;
+}
+
+.experience-details p {
+  margin: 5px 0;
+  color: #ccc;
+}
+
+.ag-courses-item_bg {
+  height: 128px;
+  width: 128px;
+  background-color: #2ea1d1;
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+  background-color: #3ecd5e;
+}
+
+.ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+  background-color: #e44002;
+}
+
+.ag-courses_item:nth-child(4n) .ag-courses-item_bg {
+  background-color: #952aff;
+}
+
+.ag-courses_item:nth-child(5n) .ag-courses-item_bg {
+  background-color: #cd3e94;
+}
+
+.ag-courses_item:nth-child(6n) .ag-courses-item_bg {
+  background-color: #4c49ea;
+}
+
+.ag-courses-item_link:hover .ag-courses-item_bg {
+  transform: scale(10);
+  transition: all 0.5s ease;
+}
+
+.ag-courses-item_link:hover .ag-courses-item_title {
+  top: 50%;
+  transform: translate(-50%, 100%);
+  color: #fff;
+}
+
+.ag-courses-item_link:hover,
+.ag-courses-item_link:hover .experience-date {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Media Queries */
+
+/* Tablet Devices (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .experience-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-column {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+
+  .experience-item {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .experience-column::before {
+    left: 50%;
+    right: 50%;
+    margin: 0 auto;
+    width: 2px;
+  }
+
+  .experience-item.left,
+  .experience-item.right {
+    margin: 30px 0;
+  }
+
+  .experience-item::before {
+    display: none;
+  }
+}
+
+/* Mobile Devices (max-width: 767px) */
+@media (max-width: 767px) {
+  .experience-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-column {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .experience-item {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .experience-column::before {
+    left: 50%;
+    right: 50%;
+    margin: 0 auto;
+    width: 2px;
+  }
+
+  .experience-item.left,
+  .experience-item.right {
+    margin: 30px 0;
+  }
+
+  .experience-item::before {
+    display: none;
+  }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .experience-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experience-column {
+    width: 95%;
+    margin-bottom: 30px;
+  }
+
+  .experience-item {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .experience-column::before {
+    left: 50%;
+    right: 50%;
+    margin: 0 auto;
+    width: 2px;
+  }
+
+  .experience-item.left,
+  .experience-item.right {
+    margin: 30px 0;
+  }
+
+  .experience-item::before {
+    display: none;
+  }
+}
