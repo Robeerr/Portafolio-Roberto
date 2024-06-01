@@ -40,6 +40,17 @@ html {
   font-size: 1.2em;
   margin-top: 20px;
   color: #595959;
+  line-height: 1.5;
+}
+
+.intro p b {
+  color: #595959;
+  transition: color 0.3s;
+}
+
+.intro p b:hover {
+  color: #2ea1d1;
+  transition: color 0.3s;
 }
 
 .buttons-container {
@@ -106,7 +117,7 @@ html {
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: 55px;
+  bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
   flex-direction: row;
@@ -125,9 +136,9 @@ html {
 }
 
 .scroll-icon {
-  width: 50px;
-  height: auto;
+  font-size: 50px;
   animation: rebounce 3s infinite;
+  color: white;
 }
 
 .scroll-icon.left {
@@ -139,17 +150,36 @@ html {
 }
 
 .profile-pic {
-  flex-shrink: 0;
+  position: relative;
   margin-left: 50px;
   max-width: 400px;
   height: auto;
-  border-radius: 50%;
   text-align: center;
 }
 
 .profile-pic img {
   max-width: 100%;
   border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-pic::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  background: radial-gradient(
+    circle,
+    rgba(46, 161, 209, 0.6) 10%,
+    transparent 80%
+  );
+  filter: blur(20px);
 }
 
 @keyframes rebounce {
@@ -217,7 +247,7 @@ html {
   }
 
   .scroll-icon {
-    width: 30px;
+    font-size: 30px;
   }
 }
 
@@ -276,7 +306,7 @@ html {
   }
 
   .scroll-icon {
-    width: 40px;
+    font-size: 40px;
   }
 }
 
@@ -343,7 +373,7 @@ html {
   }
 
   .scroll-icon {
-    width: 50px;
+    font-size: 50px;
   }
 }
 

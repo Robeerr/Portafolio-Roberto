@@ -2,11 +2,12 @@ import React from "react";
 import Swal from "sweetalert2";
 import ImagenRoberto from "../../img/Rober.PNG";
 import AnimatedText from "../AnimatedText/AnimatedText";
-import ScrollDownGif from "../../img/ScrollDown.gif";
 import CV_Roberto_Lopez from "../../img/CV_Roberto_Lopez.pdf";
 import "./IntroSection.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCloudArrowDown } from "@fortawesome/free-solid-svg-icons";
+
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const IntroSection = () => {
   const phoneNumber = "634410783";
@@ -55,15 +56,12 @@ const IntroSection = () => {
           <AnimatedText />
         </h2>{" "}
         <p>
-          ¡Hola y bienvenidos a mi portafolio! Soy <b>Roberto López</b>, un
-          apasionado <b>Desarrollador Full Stack y Diseñador UX/UI</b> dedicado
-          a crear <b>experiencias web visualmente cautivadoras</b> y{" "}
-          <b>fáciles de usar</b>. Con una <b>mezcla distintiva</b> de
-          habilidades técnicas y creatividad, tengo plena <b>confianza</b> en mi
-          capacidad para proporcionar <b>soluciones personalizadas</b> que
-          satisfacen diversos requerimientos de proyectos. Mi objetivo es
-          siempre <b>elevar</b> cada proyecto a su máximo potencial, asegurando
-          una <b>calidad excepcional</b> y una{" "}
+          ¡Hola! Soy <b>Roberto López</b>, un{" "}
+          <b>Desarrollador Full Stack y Diseñador UX/UI</b> dedicado a crear{" "}
+          <b>experiencias web cautivadoras y fáciles de usar</b>. Con una{" "}
+          combinación única de habilidades técnicas y creatividad, ofrezco{" "}
+          <b>soluciones personalizadas</b> que elevan cada proyecto a su máximo
+          potencial, asegurando <b>calidad excepcional</b> y una{" "}
           <b>experiencia de usuario inigualable</b>.
         </p>
         <div className="buttons-container">
@@ -97,20 +95,10 @@ const IntroSection = () => {
       <div className="profile-pic">
         <img src={ImagenRoberto} alt="Roberto López" />
       </div>
-      <div className="scroll-down">
-        <img
-          src={ScrollDownGif}
-          alt="Scroll Down"
-          className="scroll-icon left"
-        />
-        <p href="#skills" onClick={scrollToSection} className="scroll-link">
-          Scroll Abajo
-        </p>
-        <img
-          src={ScrollDownGif}
-          alt="Scroll Down"
-          className="scroll-icon right"
-        />
+      <div class="scroll-down">
+        <div class="scroll-icon">
+          <i class="fa fa-chevron-down"></i>
+        </div>
       </div>
     </div>
   );
