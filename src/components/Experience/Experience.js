@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Experience.css";
@@ -7,6 +7,23 @@ const Experience = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
+  const [expandedEducation, setExpandedEducation] = useState({});
+  const [expandedWork, setExpandedWork] = useState({});
+
+  const toggleEducation = (index) => {
+    setExpandedEducation({
+      ...expandedEducation,
+      [index]: !expandedEducation[index],
+    });
+  };
+
+  const toggleWork = (index) => {
+    setExpandedWork({
+      ...expandedWork,
+      [index]: !expandedWork[index],
+    });
+  };
 
   const education = [
     {
@@ -17,7 +34,6 @@ const Experience = () => {
       description:
         "Estudiando el Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM) en Ilerna, donde profundizo en el desarrollo de aplicaciones multiplataforma, tanto para dispositivos móviles como para web, con lenguajes como Java, Kotlin, C#, Javascript, etc...",
     },
-
     {
       date: "Junio, 2023",
       title: "BBK Bootcamp Diseño UX/UI",
@@ -75,15 +91,24 @@ const Experience = () => {
               key={index}
               className={`experience-item ${
                 index % 2 === 0 ? "left" : "right"
-              }`}
+              } ${expandedEducation[index] ? "expanded" : "collapsed"}`}
             >
-              <a href="#" className="ag-courses-item_link">
-                <div className="ag-courses-item_bg"></div>
+              <a className="ag-courses-item_link">
+                <div
+                  className="ag-courses-item_bg"
+                  onClick={() => toggleEducation(index)}
+                >
+                  <i className="fas fa-eye"></i>
+                </div>
                 <div className="experience-date">{item.date}</div>
                 <div className="experience-details">
                   <h4 className="ag-courses-item_title">{item.title}</h4>
                   <h5>{item.institution}</h5>
-                  <p>{item.description}</p>
+                  {expandedEducation[index] && (
+                    <>
+                      <p>{item.description}</p>
+                    </>
+                  )}
                 </div>
               </a>
             </div>
@@ -100,15 +125,24 @@ const Experience = () => {
               key={index}
               className={`experience-item ${
                 index % 2 === 0 ? "left" : "right"
-              }`}
+              } ${expandedWork[index] ? "expanded" : "collapsed"}`}
             >
-              <a href="#" className="ag-courses-item_link">
-                <div className="ag-courses-item_bg"></div>
+              <a className="ag-courses-item_link">
+                <div
+                  className="ag-courses-item_bg"
+                  onClick={() => toggleWork(index)}
+                >
+                  <i className="fas fa-eye"></i>
+                </div>
                 <div className="experience-date">{item.date}</div>
                 <div className="experience-details">
                   <h4 className="ag-courses-item_title">{item.title}</h4>
                   <h5>{item.company}</h5>
-                  <p>{item.description}</p>
+                  {expandedWork[index] && (
+                    <>
+                      <p>{item.description}</p>
+                    </>
+                  )}
                 </div>
               </a>
             </div>

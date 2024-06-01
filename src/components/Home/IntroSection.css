@@ -176,7 +176,7 @@ html {
   z-index: 0;
   background: radial-gradient(
     circle,
-    rgba(46, 161, 209, 0.6) 10%,
+    rgba(46, 161, 209, 0.6) 0%,
     transparent 80%
   );
   filter: blur(20px);
@@ -232,10 +232,6 @@ html {
     margin: 0 auto 20px;
   }
 
-  .profile-pic img {
-    max-width: 80%;
-  }
-
   .scroll-down {
     margin-top: 20px;
     bottom: -30px;
@@ -288,10 +284,6 @@ html {
 
   .profile-pic {
     margin: 0 auto 20px;
-  }
-
-  .profile-pic img {
-    max-width: 60%;
   }
 
   .scroll-down {

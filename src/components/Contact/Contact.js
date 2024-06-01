@@ -29,11 +29,11 @@ const Contact = () => {
   return (
     <section className="contact_">
       <div className="container" data-aos="fade-up">
-        <div className="left_" data-aos="fade-right">
+        <div className="left_">
           <div className="form-wrapper">
             <div className="contact-heading">
               <h1>
-                Tienes alguna pregunta? Hablemos<span>!.</span>
+                ¿Tienes alguna pregunta? Hablemos<span>!</span>
               </h1>
               <p className="text">
                 O puedes enviarme un correo a:{" "}
@@ -112,7 +112,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        <div className="right_" data-aos="fade-left">
+        <div className="right_">
           <div className="image-wrapper">
             <img src={ContactImg} alt="Contact" className="img" />
           </div>

@@ -9,6 +9,6 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  cursor: url("./img/cursor_pointer.png"), pointer;
+.App.hidden {
+  display: none;
 }

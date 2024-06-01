@@ -29,7 +29,7 @@ export default [
     id: 3,
     bgColor: "#FFFFFF",
     title: "WorköSpaces",
-    desc: " Con Worköholics, diseñé y desarrollé el frontend de 'worköSpaces', una app para gestionar espacios de trabajo y reservar salas con un mapa interactivo.",
+    desc: " Con Worköholics, diseñé y desarrollé el frontend de 'WorköSpaces', una app para gestionar espacios de trabajo y reservar salas con un mapa interactivo.",
     stack: ["React", "MongoDB", "Express", "Nodejs"],
     image: Workospaces,
     inDev: false,

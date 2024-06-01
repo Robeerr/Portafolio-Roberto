@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 import CV_Roberto_Lopez from "../../img/CV_Roberto_Lopez.pdf";
 
@@ -45,6 +45,29 @@ const Header = () => {
       setActiveLink(e.currentTarget.getAttribute("href"));
     }
   };
+
+  const handleScroll = () => {
+    const sections = document.querySelectorAll("section");
+    let currentActiveLink = "";
+
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 80 && rect.bottom >= 80) {
+        currentActiveLink = `#${section.id}`;
+      }
+    });
+
+    if (currentActiveLink !== activeLink) {
+      setActiveLink(currentActiveLink);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [activeLink]);
 
   return (
     <header className="header">
