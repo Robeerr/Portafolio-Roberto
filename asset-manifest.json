@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c3f5e9e7.css",
-    "main.js": "/static/js/main.8c8d71d3.js",
+    "main.css": "/static/css/main.cc0462b8.css",
+    "main.js": "/static/js/main.04708257.js",
     "static/js/453.7d1ffe6d.chunk.js": "/static/js/453.7d1ffe6d.chunk.js",
     "static/media/Aquality 2.PNG": "/static/media/Aquality 2.4e54439b3909b76074b1.PNG",
     "static/media/Hipica2.PNG": "/static/media/Hipica2.10b59d8d4b139f6171dd.PNG",
@@ -22,12 +22,12 @@
     "static/media/wave.svg": "/static/media/wave.54497578b5a67e57120e.svg",
     "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2",
     "index.html": "/index.html",
-    "main.c3f5e9e7.css.map": "/static/css/main.c3f5e9e7.css.map",
-    "main.8c8d71d3.js.map": "/static/js/main.8c8d71d3.js.map",
+    "main.cc0462b8.css.map": "/static/css/main.cc0462b8.css.map",
+    "main.04708257.js.map": "/static/js/main.04708257.js.map",
     "453.7d1ffe6d.chunk.js.map": "/static/js/453.7d1ffe6d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3f5e9e7.css",
-    "static/js/main.8c8d71d3.js"
+    "static/css/main.cc0462b8.css",
+    "static/js/main.04708257.js"
   ]
 }
