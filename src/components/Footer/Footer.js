@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { LanguageContext } from "../../contexts/LanguageContext";
 import "./Footer.css";
 
 const Footer = () => {
+  const { language } = useContext(LanguageContext);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("");
+
+  const scrollToSection = (e) => {
+    e.preventDefault();
+    const section = document.querySelector(
+      e.currentTarget.getAttribute("href")
+    );
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setIsMenuOpen(false);
+      setActiveLink(e.currentTarget.getAttribute("href"));
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -10,30 +27,39 @@ const Footer = () => {
             <span>Roberto</span> López
           </h1>
           <p>
-            Soy un Desarrollador Full Stack y Diseñador UX/UI apasionado por
-            crear experiencias web visualmente cautivadoras y fáciles de usar.
+            {language === "es"
+              ? "Soy un Desarrollador Full Stack y Diseñador UX/UI apasionado por crear experiencias web visualmente cautivadoras y fáciles de usar."
+              : "I am a Full Stack Developer and UX/UI Designer passionate about creating visually captivating and user-friendly web experiences."}
           </p>
         </div>
         <div className="footer-section links">
-          <h2>Links rápidos</h2>
+          <h2>{language === "es" ? "Links rápidos" : "Quick Links"}</h2>
           <br />
           <ul>
             <li>
-              <a href="#about">Sobre mí</a>
+              <a href="#homepage" onClick={scrollToSection}>
+                {language === "es" ? "Sobre mí" : "About Me"}
+              </a>
             </li>
             <li>
-              <a href="#skills">Habilidades</a>
+              <a href="#skills" onClick={scrollToSection}>
+                {language === "es" ? "Habilidades" : "Skills"}
+              </a>
             </li>
             <li>
-              <a href="#projects">Proyectos</a>
+              <a href="#projects" onClick={scrollToSection}>
+                {language === "es" ? "Proyectos" : "Projects"}
+              </a>
             </li>
             <li>
-              <a href="#contact">Contacto</a>
+              <a href="#contact" onClick={scrollToSection}>
+                {language === "es" ? "Contacto" : "Contact"}
+              </a>
             </li>
           </ul>
         </div>
         <div className="footer-section contact">
-          <h2>Contacto</h2>
+          <h2>{language === "es" ? "Contacto" : "Contact"}</h2>
           <br />
           <div className="contact-item">
             <span>
@@ -64,7 +90,10 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        &copy; 2024 Roberto López | Todos los derechos reservados
+        &copy; 2024 Roberto López |{" "}
+        {language === "es"
+          ? "Todos los derechos reservados"
+          : "All rights reserved"}
       </div>
     </footer>
   );

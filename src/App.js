@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AOS from "aos";
+
 import HomePage from "./pages/HomePage";
 import Header from "./components/Header/Header";
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
-import AOS from "aos";
+import LanguageSwitcher from "./components/LanguageSwitcher/LanguageSwitcher";
+import { LanguageProvider } from "./contexts/LanguageContext";
+
 import "aos/dist/aos.css";
 import "./App.css";
 
@@ -27,15 +31,21 @@ const App = () => {
   }, [loading]);
 
   return (
-    <Router>
-      {loading && <LoadingScreen />}
-      <div className={`App ${loading ? "hidden" : "fade-in"}`}>
-        <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-        </Routes>
-      </div>
-    </Router>
+    <LanguageProvider>
+      <Router>
+        {loading ? (
+          <LoadingScreen />
+        ) : (
+          <>
+            <Header />
+            <LanguageSwitcher />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+            </Routes>
+          </>
+        )}
+      </Router>
+    </LanguageProvider>
   );
 };
 

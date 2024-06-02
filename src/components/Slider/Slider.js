@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Slider.css";
+import { LanguageContext } from "../../contexts/LanguageContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDesktop } from "@fortawesome/free-solid-svg-icons";
 
 const Slider = ({ data, activeSlide }) => {
+  const { language } = useContext(LanguageContext);
+
   const getStyles = (index) => {
     if (activeSlide === index) {
       return {
@@ -53,53 +56,51 @@ const Slider = ({ data, activeSlide }) => {
   return (
     <div className="slideC">
       {data.map((item, i) => (
-        <React.Fragment key={item.id}>
-          <div
-            className="slide"
-            style={{
-              background: item.bgColor,
-              boxShadow: `0 5px 20px ${item.bgColor}30`,
-              ...getStyles(i),
-            }}
-          >
-            <SliderContent {...item} />
+        <div
+          key={item.id}
+          className="slide"
+          style={{
+            background: item.bgColor,
+            boxShadow: `0 5px 20px ${item.bgColor}30`,
+            ...getStyles(i),
+          }}
+        >
+          <div className="sliderContent">
+            <img
+              src={item.image}
+              alt={item.title[language]}
+              className="project-image"
+            />
+            <h3>{item.title[language]}</h3>
+            <p>{item.desc[language]}</p>
+            <div className="project-stack">
+              {item.stack.map((tech, index) => (
+                <span key={index} className="tech-badge">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <div className="project-buttons">
+              {item.demo && (
+                <a
+                  href={item.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="demo-link"
+                >
+                  <FontAwesomeIcon icon={faDesktop} />{" "}
+                  {language === "es" ? "Ver Demo" : "View Demo"}
+                </a>
+              )}
+              {item.inDev && (
+                <span className="in-dev-badge">
+                  {language === "es" ? "En Desarrollo" : "In Development"}
+                </span>
+              )}
+            </div>
           </div>
-          <div
-            className="reflection"
-            style={{
-              ...getStyles(i),
-            }}
-          />
-        </React.Fragment>
+        </div>
       ))}
-    </div>
-  );
-};
-
-const SliderContent = (props) => {
-  const hasDemo = !!props.demo;
-  const inDev = !!props.inDev;
-
-  return (
-    <div className="sliderContent">
-      <img src={props.image} alt={props.title} className="project-image" />
-      <h3>{props.title}</h3>
-      <p className={!hasDemo ? "no-demo" : ""}>{props.desc}</p>
-      <div className={`project-stack ${!hasDemo ? "no-demo" : ""}`}>
-        {props.stack.map((tech, index) => (
-          <span key={index} className="tech-badge">
-            {tech}
-          </span>
-        ))}
-      </div>
-      <div className={`project-buttons ${!hasDemo ? "no-demo" : ""}`}>
-        {hasDemo ? (
-          <a href={props.demo} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faDesktop} /> Ver Demo
-          </a>
-        ) : null}
-        {inDev ? <span className="in-dev-badge">En Desarrollo</span> : null}
-      </div>
     </div>
   );
 };

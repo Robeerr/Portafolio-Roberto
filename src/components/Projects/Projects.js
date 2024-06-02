@@ -1,15 +1,18 @@
-import React, { useState } from "react";
-import "./Projects.css";
-import "aos/dist/aos.css";
+import React, { useState, useContext } from "react";
 import Slider from "../Slider/Slider";
 import data from "./Data";
+import { LanguageContext } from "../../contexts/LanguageContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
+import "./Projects.css";
+import "aos/dist/aos.css";
+
 const Projects = () => {
+  const { language } = useContext(LanguageContext);
   const [activeSlide, setActiveSlide] = useState(0);
 
   const next = () => {
@@ -26,7 +29,9 @@ const Projects = () => {
 
   return (
     <div className="projects-section">
-      <h2 data-aos="fade-down">Mis Proyectos</h2>
+      <h2 data-aos="fade-down">
+        {language === "es" ? "Mis Proyectos" : "My Projects"}
+      </h2>
       <div className="carousel-container" data-aos="fade-up">
         <Slider data={data} activeSlide={activeSlide} />
         <div className="btns">

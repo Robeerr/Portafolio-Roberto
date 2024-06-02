@@ -1,8 +1,11 @@
-import React, { useEffect } from "react";
-import "./Contact.css";
+import React, { useEffect, useContext } from "react";
+import { LanguageContext } from "../../contexts/LanguageContext";
 import ContactImg from "../../img/contact.jpg";
 
+import "./Contact.css";
+
 const Contact = () => {
+  const { language } = useContext(LanguageContext);
   useEffect(() => {
     const inputs = document.querySelectorAll(".contact-input");
 
@@ -22,7 +25,10 @@ const Contact = () => {
   }, []);
 
   const phoneNumber = "634410783";
-  const message = "Hola, me gustaría saber más sobre tus servicios.";
+  const message =
+    language === "es"
+      ? "Hola, me gustaría saber más sobre tus servicios."
+      : "Hello, I would like to know more about your services.";
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
 
@@ -33,10 +39,15 @@ const Contact = () => {
           <div className="form-wrapper">
             <div className="contact-heading">
               <h1>
-                ¿Tienes alguna pregunta? Hablemos<span>!</span>
+                {language === "es"
+                  ? "¿Tienes alguna pregunta? Hablemos"
+                  : "Do you have any questions? Let's talk"}
+                <span>!</span>
               </h1>
               <p className="text">
-                O puedes enviarme un correo a:{" "}
+                {language === "es"
+                  ? "O puedes enviarme un correo a:"
+                  : "Or you can email me at:"}{" "}
                 <a href="mailto:dev.rober07@gmail.com">dev.rober07@gmail.com</a>
               </p>
             </div>
@@ -50,7 +61,7 @@ const Contact = () => {
                   autoComplete="off"
                   required
                 />
-                <label>Nombre</label>
+                <label>{language === "es" ? "Nombre" : "First Name"}</label>
                 <i className="icon_ fa-solid fa-address-card"></i>
               </div>
 
@@ -63,7 +74,7 @@ const Contact = () => {
                   autoComplete="off"
                   required
                 />
-                <label>Apellidos</label>
+                <label>{language === "es" ? "Apellidos" : "Last Name"}</label>
                 <i className="icon_ fa-solid fa-address-card"></i>
               </div>
 
@@ -88,14 +99,15 @@ const Contact = () => {
                   autoComplete="off"
                   required
                 ></textarea>
-                <label>Mensaje</label>
+                <label>{language === "es" ? "Mensaje" : "Message"}</label>
                 <i className="icon_ fa-solid fa-inbox"></i>
               </div>
 
               <div className="contact-buttons">
                 <label htmlFor="file-upload" className="btn_ upload">
                   <span>
-                    <i className="fa-solid fa-paperclip"></i> Añadir archivo
+                    <i className="fa-solid fa-paperclip"></i>{" "}
+                    {language === "es" ? "Añadir archivo" : "Add File"}
                   </span>
                 </label>
                 <input
@@ -104,7 +116,11 @@ const Contact = () => {
                   name="file"
                   style={{ display: "none" }}
                 />
-                <input type="submit" value="Enviar Mensaje" className="btn_" />
+                <input
+                  type="submit"
+                  value={language === "es" ? "Enviar Mensaje" : "Send Message"}
+                  className="btn_"
+                />
                 <a href={whatsappUrl} className="btn_ whatsapp">
                   <i className="fa-brands fa-whatsapp"></i> WhatsApp
                 </a>

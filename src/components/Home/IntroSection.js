@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import ImagenRoberto from "../../img/Rober.PNG";
 import AnimatedText from "../AnimatedText/AnimatedText";
+import { LanguageContext } from "../../contexts/LanguageContext";
 
 import "./IntroSection.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const IntroSection = () => {
+  const { language } = useContext(LanguageContext);
   const phoneNumber = "634410783";
-  const message = "Hola, me gustaría saber más sobre tus servicios.";
+  const message =
+    language === "es"
+      ? "Hola, me gustaría saber más sobre tus servicios."
+      : "Hello, I would like to know more about your services.";
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
 
@@ -25,19 +30,34 @@ const IntroSection = () => {
     <div className="intro-section">
       <div className="intro">
         <h1>
-          Hola, soy <span>Roberto</span>,
+          {language === "es" ? "Hola, soy " : "Hello, I am "}
+          <span>Roberto</span>,
         </h1>
         <h2>
           <AnimatedText />
         </h2>{" "}
         <p>
-          ¡Hola! Soy <b>Roberto López</b>, un{" "}
-          <b>Desarrollador Full Stack y Diseñador UX/UI</b> dedicado a crear{" "}
-          <b>experiencias web cautivadoras y fáciles de usar</b>. Con una{" "}
-          combinación única de habilidades técnicas y creatividad, ofrezco{" "}
-          <b>soluciones personalizadas</b> que elevan cada proyecto a su máximo
-          potencial, asegurando <b>calidad excepcional</b> y una{" "}
-          <b>experiencia de usuario inigualable</b>.
+          {language === "es" ? (
+            <>
+              ¡Hola! Soy <b>Roberto López</b>, un{" "}
+              <b>Desarrollador Full Stack y Diseñador UX/UI</b> dedicado a crear{" "}
+              <b>experiencias web cautivadoras y fáciles de usar</b>. Con una{" "}
+              combinación única de habilidades técnicas y creatividad, ofrezco{" "}
+              <b>soluciones personalizadas</b> que elevan cada proyecto a su
+              máximo potencial, asegurando <b>calidad excepcional</b> y una{" "}
+              <b>experiencia de usuario inigualable</b>.
+            </>
+          ) : (
+            <>
+              Hello! I am <b>Roberto López</b>, a{" "}
+              <b>Full Stack Developer and UX/UI Designer</b> dedicated to
+              creating <b>captivating and user-friendly web experiences</b>.
+              With a unique combination of technical skills and creativity, I
+              offer <b>customized solutions</b> that elevate every project to
+              its highest potential, ensuring <b>exceptional quality</b> and an{" "}
+              <b>unmatched user experience</b>.
+            </>
+          )}
         </p>
         <div className="buttons-container">
           <div className="buttons">
@@ -49,7 +69,7 @@ const IntroSection = () => {
               className="btn contact"
               onClick={scrollToSection}
             >
-              Contáctame
+              {language === "es" ? "Contáctame" : "Contact Me"}
             </a>
           </div>
           <div className="whatsapp-button-container"></div>
@@ -58,9 +78,9 @@ const IntroSection = () => {
       <div className="profile-pic">
         <img src={ImagenRoberto} alt="Roberto López" />
       </div>
-      <div class="scroll-down">
-        <div class="scroll-icon">
-          <i class="fa fa-chevron-down"></i>
+      <div className="scroll-down">
+        <div className="scroll-icon">
+          <i className="fa fa-chevron-down"></i>
         </div>
       </div>
     </div>

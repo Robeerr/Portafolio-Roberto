@@ -1,10 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { LanguageContext } from "../../contexts/LanguageContext";
+
 import "./AnimatedText.css";
 
-const texts = ["Desarrollador Full-Stack", "Diseñador UX/UI"];
+const texts = {
+  es: ["Desarrollador Full-Stack", "Diseñador UX/UI"],
+  en: ["Full-Stack Developer", "UX/UI Designer"],
+};
 
 const AnimatedText = () => {
-  const [currentText, setCurrentText] = useState(texts[0]);
+  const { language } = useContext(LanguageContext);
+  const [currentText, setCurrentText] = useState(texts[language][0]);
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -18,8 +24,8 @@ const AnimatedText = () => {
           setCharIndex(charIndex - 1);
         } else {
           setIsDeleting(false);
-          setIndex((index + 1) % texts.length);
-          setCurrentText(texts[(index + 1) % texts.length]);
+          setIndex((index + 1) % texts[language].length);
+          setCurrentText(texts[language][(index + 1) % texts[language].length]);
         }
       } else {
         if (charIndex < currentText.length) {
@@ -35,7 +41,15 @@ const AnimatedText = () => {
     const timeout = setTimeout(handleTyping, typingDelay);
 
     return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, currentText, index]);
+  }, [charIndex, isDeleting, currentText, index, language]);
+
+  useEffect(() => {
+    setCurrentText(texts[language][0]);
+    setDisplayedText("");
+    setIndex(0);
+    setCharIndex(0);
+    setIsDeleting(false);
+  }, [language]);
 
   return (
     <div className="animated-text">

@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Swal from "sweetalert2";
 import CV_Roberto_Lopez from "../../img/CV_Roberto_Lopez.pdf";
+import { LanguageContext } from "../../contexts/LanguageContext";
 
 import "./Header.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Header = () => {
+  const { language } = useContext(LanguageContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("");
 
@@ -18,8 +20,8 @@ const Header = () => {
     const downloadLink = CV_Roberto_Lopez;
 
     Swal.fire({
-      title: "Descarga en curso...",
-      text: "El CV está siendo descargado.",
+      title: language === "es" ? "Descargando CV" : "Downloading CV",
+      text: language === "es" ? "Por favor, espera un momento" : "Please wait",
       icon: "info",
       showConfirmButton: false,
       timer: 2000,
@@ -41,7 +43,7 @@ const Header = () => {
     );
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false); // Close the menu after clicking a link
+      setIsMenuOpen(false);
       setActiveLink(e.currentTarget.getAttribute("href"));
     }
   };
@@ -79,7 +81,7 @@ const Header = () => {
               onClick={scrollToSection}
               className={activeLink === "#homepage" ? "active" : ""}
             >
-              Sobre mí
+              {language === "es" ? "Sobre mí" : "About me"}
             </a>
           </li>
           <li>
@@ -88,7 +90,7 @@ const Header = () => {
               onClick={scrollToSection}
               className={activeLink === "#skills" ? "active" : ""}
             >
-              Habilidades
+              {language === "es" ? "Habilidades" : "Skills"}
             </a>
           </li>
           <li>
@@ -97,7 +99,7 @@ const Header = () => {
               onClick={scrollToSection}
               className={activeLink === "#projects" ? "active" : ""}
             >
-              Proyectos
+              {language === "es" ? "Proyectos" : "Projects"}
             </a>
           </li>
           <li>
@@ -106,7 +108,7 @@ const Header = () => {
               onClick={scrollToSection}
               className={activeLink === "#experience" ? "active" : ""}
             >
-              Experiencia
+              {language === "es" ? "Experiencia" : "Experience"}
             </a>
           </li>
           <li>
@@ -115,7 +117,7 @@ const Header = () => {
               onClick={scrollToSection}
               className={activeLink === "#contact" ? "active" : ""}
             >
-              Contacto
+              {language === "es" ? "Contacto" : "Contact"}
             </a>
           </li>
         </ul>
@@ -127,7 +129,7 @@ const Header = () => {
           onClick={descargarCV}
         >
           <i className="fa-solid fa-cloud-arrow-down fa-lg download-icon"></i>
-          Descargar CV
+          {language === "es" ? "Descargar CV" : "Download CV"}
         </a>
       </div>
       <div className="menu-toggle" onClick={toggleMenu}>

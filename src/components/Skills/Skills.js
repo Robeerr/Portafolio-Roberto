@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { LanguageContext } from "../../contexts/LanguageContext";
+
 import "./Skills.css";
 
-// Importa las imágenes de los iconos
 import Html5 from "../../img/html-5.png";
 import Css3 from "../../img/css-3.png";
 import JavaScript from "../../img/javascript.png";
@@ -25,9 +26,10 @@ import Git from "../../img/git.png";
 import Kotlin from "../../img/kotlin.png";
 
 const Skills = () => {
+  const { language } = useContext(LanguageContext);
   return (
     <div className="skills-section" data-aos="fade-up">
-      <h2>Stack Tecnológico</h2>
+      <h2>{language === "es" ? "Stack Tecnológico" : "Tech Stack"}</h2>
       <div className="skills-columns">
         <div className="skills-column" data-aos="fade-up">
           <h3>Frontend</h3>
@@ -108,7 +110,7 @@ const Skills = () => {
           </div>
         </div>
         <div className="skills-column" data-aos="fade-up" data-aos-delay="400">
-          <h3>Otros</h3>
+          <h3>{language === "es" ? "Otras" : "Others"}</h3>
           <div className="icon-container">
             <div className="icon-wrapper">
               <img src={Figma} alt="Figma" className="icon" />

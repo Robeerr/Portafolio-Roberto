@@ -1,0 +1,51 @@
+.language-switcher {
+  position: fixed;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.language-switcher:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.language-switcher .flag {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 5px;
+}
+
+.language-switcher .flag.active {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.language-switcher .flag:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries */
+
+/* Devices between 360px and 768px */
+@media (min-width: 360px) and (max-width: 768px) {
+  .language-switcher {
+    left: 5px;
+    padding: 8px;
+  }
+
+  .language-switcher .flag {
+    width: 30px;
+  }
+}
