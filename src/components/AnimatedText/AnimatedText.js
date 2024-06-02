@@ -15,6 +15,7 @@ const AnimatedText = () => {
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [startAnimation, setStartAnimation] = useState(false);
 
   useEffect(() => {
     const handleTyping = () => {
@@ -37,11 +38,12 @@ const AnimatedText = () => {
       }
     };
 
-    const typingDelay = isDeleting ? 50 : 150;
-    const timeout = setTimeout(handleTyping, typingDelay);
-
-    return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, currentText, index, language]);
+    if (startAnimation) {
+      const typingDelay = isDeleting ? 50 : 150;
+      const timeout = setTimeout(handleTyping, typingDelay);
+      return () => clearTimeout(timeout);
+    }
+  }, [charIndex, isDeleting, currentText, index, language, startAnimation]);
 
   useEffect(() => {
     setCurrentText(texts[language][0]);
@@ -49,6 +51,7 @@ const AnimatedText = () => {
     setIndex(0);
     setCharIndex(0);
     setIsDeleting(false);
+    setStartAnimation(true);
   }, [language]);
 
   return (

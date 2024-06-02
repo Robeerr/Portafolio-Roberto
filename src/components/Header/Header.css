@@ -12,7 +12,7 @@
 .header__nav {
   position: absolute;
   flex-grow: 1;
-  left: 15%;
+  left: 18%;
 }
 
 .header__nav ul {
@@ -36,6 +36,11 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
+.header__nav ul li {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
 .header__nav a.active {
   background-color: #2ea1d1;
   color: white;
@@ -50,7 +55,7 @@
 
 .header__resume {
   position: absolute;
-  right: 15%;
+  right: 18%;
 }
 
 .header__resume .resume-button {
@@ -64,6 +69,8 @@
   overflow: hidden;
   transition: color 0.5s ease;
   z-index: 1;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in forwards;
 }
 
 .header__resume .resume-button::after {
@@ -113,18 +120,43 @@
   position: absolute;
   right: 20px;
   cursor: pointer;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in forwards;
 }
 
 .menu-toggle .fa {
   color: white;
 }
 
-/* Media Queries */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Media Queries */
 @media (max-width: 855px) {
   .header {
     padding: 20px 10px;
+    animation: none;
   }
+
   .header__nav {
     display: none;
   }

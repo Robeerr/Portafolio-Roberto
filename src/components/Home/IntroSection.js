@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ImagenRoberto from "../../img/Rober.PNG";
 import AnimatedText from "../AnimatedText/AnimatedText";
 import { LanguageContext } from "../../contexts/LanguageContext";
@@ -26,20 +26,30 @@ const IntroSection = () => {
     }
   };
 
+  const [elementsLoaded, setElementsLoaded] = useState(false);
+
+  useEffect(() => {
+    const loadTimeout = setTimeout(() => {
+      setElementsLoaded(true);
+    }, 1000);
+
+    return () => clearTimeout(loadTimeout);
+  }, []);
+
   return (
     <div className="intro-section">
-      <div className="intro">
+      <div className={`intro ${elementsLoaded ? "loaded" : ""}`}>
         <h1>
           {language === "es" ? "Hola, soy " : "Hello, I am "}
           <span>Roberto</span>,
         </h1>
         <h2>
           <AnimatedText />
-        </h2>{" "}
+        </h2>
         <p>
           {language === "es" ? (
             <>
-              ¡Hola! Soy <b>Roberto López</b>, un{" "}
+              ¡Hola! Soy <b>Roberto López</b>,{" "}
               <b>Desarrollador Full Stack y Diseñador UX/UI</b> dedicado a crear{" "}
               <b>experiencias web cautivadoras y fáciles de usar</b>. Con una{" "}
               combinación única de habilidades técnicas y creatividad, ofrezco{" "}
@@ -75,10 +85,10 @@ const IntroSection = () => {
           <div className="whatsapp-button-container"></div>
         </div>
       </div>
-      <div className="profile-pic">
+      <div className={`profile-pic ${elementsLoaded ? "loaded" : ""}`}>
         <img src={ImagenRoberto} alt="Roberto López" />
       </div>
-      <div className="scroll-down">
+      <div className={`scroll-down ${elementsLoaded ? "loaded" : ""}`}>
         <div className="scroll-icon">
           <i className="fa fa-chevron-down"></i>
         </div>

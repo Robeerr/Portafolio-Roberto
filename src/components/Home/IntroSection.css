@@ -14,11 +14,10 @@ html {
   background-color: #333;
   color: white;
   height: 100vh;
-  position: relative;
 }
 
 .intro {
-  max-width: 30%;
+  max-width: 40%;
   text-align: left;
   margin-bottom: 20px;
 }
@@ -182,6 +181,41 @@ html {
   filter: blur(20px);
 }
 
+.intro-section .intro h1,
+.intro-section .intro h2 {
+  opacity: 0;
+  animation: slideInFromLeft 1s forwards;
+}
+
+.intro-section .intro p,
+.intro-section .buttons-container {
+  opacity: 0;
+  animation: slideInFromLeft 1s forwards;
+}
+
+.intro-section .intro h1 {
+  animation-delay: 0.3s;
+}
+
+.intro-section .intro h2 {
+  animation-delay: 0.6s;
+}
+
+.intro-section .intro p {
+  animation-delay: 0.9s;
+}
+
+.intro-section .buttons-container {
+  animation-delay: 1.2s;
+}
+
+.intro-section .profile-pic,
+.intro-section .scroll-down {
+  opacity: 0;
+  animation: slideInFromLeft 1s forwards;
+  animation-delay: 1.5s;
+}
+
 @keyframes rebounce {
   0% {
     transform: translateY(0);
@@ -191,6 +225,17 @@ html {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 

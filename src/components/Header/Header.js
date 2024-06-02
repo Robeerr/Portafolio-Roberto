@@ -81,15 +81,6 @@ const Header = () => {
         <ul>
           <li>
             <a
-              href="#homepage"
-              onClick={scrollToSection}
-              className={activeLink === "#homepage" ? "active" : ""}
-            >
-              {language === "es" ? "Sobre mí" : "About me"}
-            </a>
-          </li>
-          <li>
-            <a
               href="#skills"
               onClick={scrollToSection}
               className={activeLink === "#skills" ? "active" : ""}
