@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import Swal from "sweetalert2";
-import CV_Roberto_Lopez from "../../img/CV_Roberto_Lopez.pdf";
+import CV_Roberto_Lopez from "../../img/CV ROBERTO LOPEZ.pdf";
+import CV_Roberto_Lopez_EN from "../../img/CV ROBERTO LOPEZ - EN.pdf";
 import { LanguageContext } from "../../contexts/LanguageContext";
 
 import "./Header.css";
@@ -17,7 +18,10 @@ const Header = () => {
 
   const descargarCV = (e) => {
     e.preventDefault();
-    const downloadLink = CV_Roberto_Lopez;
+    const downloadLink =
+      language === "es" ? CV_Roberto_Lopez : CV_Roberto_Lopez_EN;
+    const fileName =
+      language === "es" ? "CV_Roberto_Lopez.pdf" : "CV_Roberto_Lopez_EN.pdf";
 
     Swal.fire({
       title: language === "es" ? "Descargando CV" : "Downloading CV",
