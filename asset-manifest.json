@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.212624f5.css",
-    "main.js": "/static/js/main.04708257.js",
+    "main.css": "/static/css/main.92af7339.css",
+    "main.js": "/static/js/main.bb4bf459.js",
     "static/js/453.7d1ffe6d.chunk.js": "/static/js/453.7d1ffe6d.chunk.js",
     "static/media/Aquality 2.PNG": "/static/media/Aquality 2.4e54439b3909b76074b1.PNG",
     "static/media/Hipica2.PNG": "/static/media/Hipica2.10b59d8d4b139f6171dd.PNG",
@@ -11,8 +11,10 @@
     "static/media/worköSpaces3.png": "/static/media/worköSpaces3.4bc2c2872d881daa92c3.png",
     "static/media/Rober.PNG": "/static/media/Rober.a86beae786f741cd5165.PNG",
     "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.bacd5de623fb563b961a.ttf",
+    "static/media/bandera-reino-unido.png": "/static/media/bandera-reino-unido.8d3dda57b93ab73bce3e.png",
     "static/media/CV_Roberto_Lopez.pdf": "/static/media/CV_Roberto_Lopez.dc0bbc2ca92fd6871a66.pdf",
     "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.60127e352b7a11f7f1bc.ttf",
+    "static/media/bandera-española.png": "/static/media/bandera-española.a4d935fc192935e8a770.png",
     "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.4d986b00ff9ca3828fbd.woff2",
     "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.455ea818179b4def0c43.woff2",
     "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.eb91f7b948a42799f678.ttf",
@@ -22,12 +24,12 @@
     "static/media/wave.svg": "/static/media/wave.54497578b5a67e57120e.svg",
     "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2",
     "index.html": "/index.html",
-    "main.212624f5.css.map": "/static/css/main.212624f5.css.map",
-    "main.04708257.js.map": "/static/js/main.04708257.js.map",
+    "main.92af7339.css.map": "/static/css/main.92af7339.css.map",
+    "main.bb4bf459.js.map": "/static/js/main.bb4bf459.js.map",
     "453.7d1ffe6d.chunk.js.map": "/static/js/453.7d1ffe6d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.212624f5.css",
-    "static/js/main.04708257.js"
+    "static/css/main.92af7339.css",
+    "static/js/main.bb4bf459.js"
   ]
 }
