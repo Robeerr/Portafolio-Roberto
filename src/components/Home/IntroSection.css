@@ -20,6 +20,7 @@ html {
   max-width: 40%;
   text-align: left;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .intro h1 {
@@ -117,7 +118,7 @@ html {
   justify-content: center;
   position: absolute;
   bottom: 80px;
-  left: 50%;
+  left: 48%;
   transform: translateX(-50%);
   flex-direction: row;
   z-index: 1;
@@ -279,7 +280,7 @@ html {
 
   .scroll-down {
     margin-top: 20px;
-    bottom: -30px;
+    bottom: -200px;
     z-index: 1;
   }
 
@@ -334,7 +335,7 @@ html {
   .scroll-down {
     margin-top: 20px;
     flex-direction: row;
-    bottom: -40px;
+    bottom: -245px;
     z-index: 1;
   }
 
@@ -344,6 +345,12 @@ html {
 
   .scroll-icon {
     font-size: 40px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 515px) {
+  .scroll-down {
+    bottom: -300px;
   }
 }
 
@@ -399,8 +406,8 @@ html {
     flex-direction: row;
     align-items: center;
     position: absolute;
-    bottom: -50px;
-    left: 50%;
+    bottom: -180px;
+    left: 48%;
     transform: translateX(-50%);
     z-index: 1;
   }
@@ -416,6 +423,6 @@ html {
 
 @media (min-width: 1251px) and (max-width: 1600px) {
   .scroll-down {
-    bottom: -70px;
+    bottom: -100px;
   }
 }
