@@ -88,11 +88,6 @@ const IntroSection = () => {
       <div className={`profile-pic ${elementsLoaded ? "loaded" : ""}`}>
         <img src={ImagenRoberto} alt="Roberto López" />
       </div>
-      <div className={`scroll-down ${elementsLoaded ? "loaded" : ""}`}>
-        <div className="scroll-icon">
-          <i className="fa fa-chevron-down"></i>
-        </div>
-      </div>
     </div>
   );
 };
