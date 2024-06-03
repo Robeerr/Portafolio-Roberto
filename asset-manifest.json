@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a6b27f15.css",
-    "main.js": "/static/js/main.fc4b10e0.js",
+    "main.js": "/static/js/main.0a23670d.js",
     "static/js/453.7d1ffe6d.chunk.js": "/static/js/453.7d1ffe6d.chunk.js",
     "static/media/Aquality 2.PNG": "/static/media/Aquality 2.4e54439b3909b76074b1.PNG",
     "static/media/Hipica2.PNG": "/static/media/Hipica2.10b59d8d4b139f6171dd.PNG",
@@ -26,11 +26,11 @@
     "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2",
     "index.html": "/index.html",
     "main.a6b27f15.css.map": "/static/css/main.a6b27f15.css.map",
-    "main.fc4b10e0.js.map": "/static/js/main.fc4b10e0.js.map",
+    "main.0a23670d.js.map": "/static/js/main.0a23670d.js.map",
     "453.7d1ffe6d.chunk.js.map": "/static/js/453.7d1ffe6d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a6b27f15.css",
-    "static/js/main.fc4b10e0.js"
+    "static/js/main.0a23670d.js"
   ]
 }
