@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a6b27f15.css",
-    "main.js": "/static/js/main.0a23670d.js",
+    "main.js": "/static/js/main.396ca093.js",
     "static/js/453.7d1ffe6d.chunk.js": "/static/js/453.7d1ffe6d.chunk.js",
     "static/media/Aquality 2.PNG": "/static/media/Aquality 2.4e54439b3909b76074b1.PNG",
     "static/media/Hipica2.PNG": "/static/media/Hipica2.10b59d8d4b139f6171dd.PNG",
@@ -12,7 +12,7 @@
     "static/media/Rober.PNG": "/static/media/Rober.a86beae786f741cd5165.PNG",
     "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.bacd5de623fb563b961a.ttf",
     "static/media/bandera-reino-unido.png": "/static/media/bandera-reino-unido.8d3dda57b93ab73bce3e.png",
-    "static/media/CV ROBERTO LOPEZ.pdf": "/static/media/CV ROBERTO LOPEZ.1e7c9f0d3168c0b9923b.pdf",
+    "static/media/CV ROBERTO LOPEZ.pdf": "/static/media/CV ROBERTO LOPEZ.9805fd1daec1e9b9b1fd.pdf",
     "static/media/CV ROBERTO LOPEZ - EN.pdf": "/static/media/CV ROBERTO LOPEZ - EN.95b4577a7f35e55fb3db.pdf",
     "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.60127e352b7a11f7f1bc.ttf",
     "static/media/bandera-española.png": "/static/media/bandera-española.a4d935fc192935e8a770.png",
@@ -26,11 +26,11 @@
     "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2",
     "index.html": "/index.html",
     "main.a6b27f15.css.map": "/static/css/main.a6b27f15.css.map",
-    "main.0a23670d.js.map": "/static/js/main.0a23670d.js.map",
+    "main.396ca093.js.map": "/static/js/main.396ca093.js.map",
     "453.7d1ffe6d.chunk.js.map": "/static/js/453.7d1ffe6d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a6b27f15.css",
-    "static/js/main.0a23670d.js"
+    "static/js/main.396ca093.js"
   ]
 }
