@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import ImagenRoberto from "../../img/Rober.PNG";
 import AnimatedText from "../AnimatedText/AnimatedText";
 import { LanguageContext } from "../../contexts/LanguageContext";
+import { getGeoInfo } from "../../services/geoService";
 
 import "./IntroSection.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -27,11 +28,23 @@ const IntroSection = () => {
   };
 
   const [elementsLoaded, setElementsLoaded] = useState(false);
+  const [geoInfo, setGeoInfo] = useState(null);
 
   useEffect(() => {
     const loadTimeout = setTimeout(() => {
       setElementsLoaded(true);
     }, 1000);
+
+    const fetchGeoInfo = async () => {
+      try {
+        const data = await getGeoInfo();
+        setGeoInfo(data);
+      } catch (error) {
+        console.error("Error fetching geolocation data:", error);
+      }
+    };
+
+    fetchGeoInfo();
 
     return () => clearTimeout(loadTimeout);
   }, []);
@@ -82,6 +95,13 @@ const IntroSection = () => {
               {language === "es" ? "Contáctame" : "Contact Me"}
             </a>
           </div>
+          {geoInfo && (
+            <h2 className="last-visit">
+              {language === "es"
+                ? `Última visita desde ${geoInfo.city}, ${geoInfo.country}`
+                : `Last visit from ${geoInfo.city}, ${geoInfo.country}`}
+            </h2>
+          )}
           <div className="whatsapp-button-container"></div>
         </div>
       </div>
