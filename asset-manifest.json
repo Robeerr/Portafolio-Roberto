@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f58c2de6.css",
-    "main.js": "/static/js/main.9244a920.js",
+    "main.js": "/static/js/main.434cda50.js",
     "static/js/453.7d1ffe6d.chunk.js": "/static/js/453.7d1ffe6d.chunk.js",
     "static/media/Aquality 2.PNG": "/static/media/Aquality 2.4e54439b3909b76074b1.PNG",
     "static/media/Hipica2.PNG": "/static/media/Hipica2.10b59d8d4b139f6171dd.PNG",
@@ -11,6 +11,7 @@
     "static/media/worköSpaces3.png": "/static/media/worköSpaces3.4bc2c2872d881daa92c3.png",
     "static/media/Rober.PNG": "/static/media/Rober.a86beae786f741cd5165.PNG",
     "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.bacd5de623fb563b961a.ttf",
+    "static/media/lantzarez.PNG": "/static/media/lantzarez.dee0f3619111cbcbb73c.PNG",
     "static/media/bandera-reino-unido.png": "/static/media/bandera-reino-unido.8d3dda57b93ab73bce3e.png",
     "static/media/CV ROBERTO LOPEZ.pdf": "/static/media/CV ROBERTO LOPEZ.9805fd1daec1e9b9b1fd.pdf",
     "static/media/CV ROBERTO LOPEZ - EN.pdf": "/static/media/CV ROBERTO LOPEZ - EN.95b4577a7f35e55fb3db.pdf",
@@ -26,11 +27,11 @@
     "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2",
     "index.html": "/index.html",
     "main.f58c2de6.css.map": "/static/css/main.f58c2de6.css.map",
-    "main.9244a920.js.map": "/static/js/main.9244a920.js.map",
+    "main.434cda50.js.map": "/static/js/main.434cda50.js.map",
     "453.7d1ffe6d.chunk.js.map": "/static/js/453.7d1ffe6d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f58c2de6.css",
-    "static/js/main.9244a920.js"
+    "static/js/main.434cda50.js"
   ]
 }
