@@ -3,6 +3,7 @@ import Hipica from "../../img/Hipica2.PNG";
 import Workospaces from "../../img/worköSpaces3.png";
 import CityPulse from "../../img/CityPulse3.png";
 import Aquality from "../../img/Aquality 2.PNG";
+import Lantzarez from "../../img/lantzarez.PNG";
 
 const projects = [
   {
@@ -25,6 +26,22 @@ const projects = [
     id: 2,
     bgColor: "#FFFFFF",
     title: {
+      es: "Lantzarez",
+      en: "Lantzarez",
+    },
+    desc: {
+      es: "Desarrollé 'Lantzarez', una marca que ofrece embutidos y productos artesanales de alta calidad, potenciando su compromiso con la tradición y la cercanía con el cliente.",
+      en: "I developed the digital presence for 'Lantzarez', a brand offering high-quality artisanal charcuterie and products, enhancing its commitment to tradition, sustainability, and customer proximity through an intuitive and engaging web experience.",
+    },
+    stack: ["React", "TalwindCSS", "JavaScript"],
+    image: Lantzarez,
+    demo: "https://lantzarez.vercel.app/",
+    inDev: false,
+  },
+  {
+    id: 3,
+    bgColor: "#FFFFFF",
+    title: {
       es: "Hipica App",
       en: "Hipica App",
     },
@@ -38,7 +55,7 @@ const projects = [
     inDev: true,
   },
   {
-    id: 3,
+    id: 4,
     bgColor: "#FFFFFF",
     title: {
       es: "WorköSpaces",
@@ -53,7 +70,7 @@ const projects = [
     inDev: false,
   },
   {
-    id: 4,
+    id: 5,
     bgColor: "#FFFFFF",
     title: {
       es: "CityPulse",
@@ -68,7 +85,7 @@ const projects = [
     inDev: false,
   },
   {
-    id: 5,
+    id: 6,
     bgColor: "#FFFFFF",
     title: {
       es: "Aquality",
