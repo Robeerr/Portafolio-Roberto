@@ -31,7 +31,7 @@ const projects = [
     },
     desc: {
       es: "Desarrollé 'Lantzarez', una marca que ofrece embutidos y productos artesanales de alta calidad, potenciando su compromiso con la tradición y la cercanía con el cliente.",
-      en: "I developed the digital presence for 'Lantzarez', a brand offering high-quality artisanal charcuterie and products, enhancing its commitment to tradition, sustainability, and customer proximity through an intuitive and engaging web experience.",
+      en: "I developed 'Lantzarez', a brand that offers high quality sausages and artisanal products, enhancing its commitment to tradition and closeness to the customer.",
     },
     stack: ["React", "TalwindCSS", "JavaScript"],
     image: Lantzarez,
